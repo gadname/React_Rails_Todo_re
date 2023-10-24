@@ -1,5 +1,9 @@
-const Task = (props) => {
+import React from 'react';
+
+const Task = (ass) => {
     return (
-    <h1>{props.name}</h1>
+    <li>{ass.name}</li>
     )
 }
+
+export default Task
