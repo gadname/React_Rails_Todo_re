@@ -1,9 +1,14 @@
 import React from 'react';
+import { Checkbox, Box, Text } from "@chakra-ui/react";
 
-const Task = (ass) => {
+const Task = (props) => {
     return (
-    <li>{ass.name}</li>
-    )
+        <Box mb="16px">
+      <Checkbox colorScheme="blue" size="lg">
+    <Text>{props.name}</Text>
+    </Checkbox>
+    </Box>
+    );
 }
 
 export default Task
