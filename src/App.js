@@ -43,9 +43,18 @@ const App = () => {
     </Text>
     </Box>
           <CheckboxGroup>
-    <Task name="買い物" /> 
-    <Task name="ランニング" />
-    <Task name="プログラミングの基礎" />
+            {tasks.map((task, index) => {
+              return (
+              <Task
+                key={index}
+                index={index}
+                name={task.name}
+                isDone={task.isDone}
+                toggleIsDone={toggleIsDone}
+                />
+              )
+            })}
+    
     </CheckboxGroup>
         </Box>
       </Center>
